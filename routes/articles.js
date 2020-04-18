@@ -7,7 +7,7 @@ router.get('/', ((req,res) => {
     Articles.find()
     .then(articles => res.json(articles))
     .catch(err => res.status(400).json('Error: ' + err));
-});
+}));
 
 //REQUEST ADD NEW ARTICLE
 router.post('/add', (req,res) => {
