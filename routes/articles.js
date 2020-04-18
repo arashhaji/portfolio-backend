@@ -1,8 +1,9 @@
-const router = require('express').Router();
-let Articles= require('../models/articles.models');
+const express = require('express');
+const router = express.Router();
+const Articles = require('../models/articles.models')
 
 //REQUEST GET ALL ARTICLES 
-router.route('/').get((req,res) => {
+router.get('/', ((req,res) => {
     Articles.find()
     .then(articles => res.json(articles))
     .catch(err => res.status(400).json('Error: ' + err));
