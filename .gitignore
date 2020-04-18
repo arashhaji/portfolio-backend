@@ -1,3 +1,7 @@
 # dependencies directory 
 node_modules/
 .env
+yarn.lock/
+
+# VSCode
+.vscode/
