@@ -6,7 +6,12 @@ const cors = require('cors');
 const app = express();
 const port = process.env.Port || 5050;
 
-app.use(cors());
+app.use(cors({
+    "origin": "*",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204
+  }));
 app.use(express.json());
 
 
